@@ -23,10 +23,29 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.txtNumber{
+  margin-left: 10px;
+}
 
 .App-link {
   color: #61dafb;
 }
+.lbl-form{
+  float: left;
+  text-align: left;
+}
+
+.btn-clear{
+  background-color: aqua;
+  color: #a30404;
+  border-radius: 2px;
+}
+
+.company-logo{
+  width: 350px;
+  height: 150px;
+}
+
 
 @keyframes App-logo-spin {
   from {

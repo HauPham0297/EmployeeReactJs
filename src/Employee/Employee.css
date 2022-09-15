@@ -1,0 +1,43 @@
+.employee-form-submit
+{
+  min-width: 500px;
+  font-size: 18px;
+}
+
+.input-form{
+  height: 25px;
+  width: 90%;
+  margin-right: 10%;  
+}
+
+.title{
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.select-position{
+  width: 30%;
+  margin-right: 70%;
+}
+
+.btn-submit{
+  width: 20%;
+  margin: auto;
+}
+
+.btn-edit-employee, .btn-delete-employee
+{
+  height: 30px;
+  text-align: center;
+  align-content: end;
+  padding: 0;
+  width: 80px;
+}
+
+.btn-delete-employee
+{
+  margin-left: 10px;
+}
+.float-left{
+    float: left;
+}
