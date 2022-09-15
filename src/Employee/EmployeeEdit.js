@@ -26,30 +26,17 @@ function EmployeeEdit() {
     if(errMess != '')
       alert(errMess)      
     else {
-      if(employeeData.EmployeeId != null)
+      if(employeId != null)
       {
         await setDoc(doc(db, 'Employee', employeId), employeeData, { merge: true})
         alert('Employee is updated')
         navigate('/employeeList');
-      }else{
-        //get max_employee_id
-        let empDoc = await query(collection(db, 'Employee'), orderBy('EmployeeId', 'desc'),limitToLast(1))
-        // onSnapshot(empDoc, (querySnapshot) => {
-        //  querySnapshot.docs.map(doc =>
-        //     ({
-        //       id: doc.id,
-        //       data: doc.data()
-        //     })
-        //   )
-        // })
-        let empData = empDoc ? empDoc.data() : 0;
-        // console.log(empData)
-        employeeData.EmployeeId = 3;
-        // setEmployeeData({...employeeData})
-        // //add new data
-        // let docRef = await addDoc(collection(db, "Employee"), employeeData);
-        // navigate('/employeeList');
-        console.log("Document written with ID: ", empData);
+      }else{        
+        //add new data
+        let docRef = await addDoc(collection(db, "Employee"), employeeData);
+        alert('Employee is added')
+        navigate('/employeeList');
+        console.log("Document written with ID: ", docRef);
         
       }
     }

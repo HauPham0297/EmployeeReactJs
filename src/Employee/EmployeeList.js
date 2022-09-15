@@ -13,7 +13,7 @@ export const EmployeeList = () => {
   }
  
   useEffect(async () => {
-    const q = await query(collection(db, 'Employee'), orderBy('EmployeeId', 'asc'))
+    const q = await query(collection(db, 'Employee'), orderBy('Name', 'asc'))
     onSnapshot(q, (querySnapshot) => {
       setListEmployees(querySnapshot.docs.map(doc =>
         ({
